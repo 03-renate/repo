@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>About Us</title> 
+        <!--using viewport to tell how width and content should be displayed inside the device, 
+        content width tells the edge of website to follow edge of device, 
+        initial scale tells to scale the content inside the website so it matches the device-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"> 
+        <link rel = "stylesheet" href = "about.css">
+        <script src = "https://kit.fontawesome.com/49c1127b94.js" crossorigin = "anonymous"></script>
+        <script type = "text/javascript" src = "nav.js" defer> </script>
+    </head>
+
+    <body>
+        <header>
+            <!--NAV START-->
+            <nav class = "nav">
+                <ul>
+                    <!-- LOGO -->
+                    <li class = "logo">
+                        <a role = "logo" href="index.html" class = "logo-img">
+                            <img src = "imgs/logo.png" alt = "logo">
+                        </a>
+                    </li>
+
+                    <!--MENU-->
+                    <li class = "menu">
+                        <i class="fa-solid fa-bars"></i> 
+                    </li>
+
+                    <!-- SEARCH -->
+                    <li class="search-container">
+                        <form action = "">
+                            <input type = "text" placeholder = "Search...">
+                        </form>
+                        <button class = "search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </li>
+
+                    <!-- NOTIFICATION, HELP & PROFILE -->
+                    <li class="profile-container"> 
+                            <i class="fa-solid fa-bell"></i>
+                            <i class="fa-regular fa-circle-question"></i>
+                            <div class = "profile-box">
+                                <img src = "imgs/profile.png" alt = "profile-pic">
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--MOBILE SIDEBAR START-->
+            <nav id = "mobile" class = "mobile">
+                <ul class = "mobile-list">
+                    <!--HOME-->
+                    <li>
+                        <a href="index.html" class="mobile-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                
+                    <!-- LIVE AUCTION -->
+                    <li>
+                        <a href="auction.html" class="mobile-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+
+                    <!-- CART -->
+                    <li>
+                        <a href="cart.html" class="mobile-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- MOBILE NAV END-->
+        </header>
+            <!--NAV END-->
+
+        <!-- MAIN START -->
+        <main>
+            <!--DESKTOP SIDEBAR START-->
+            <aside id = "sidebar" class = "sidebar">
+                <!--HOME-->
+                <ul class = "sidebar-list">
+                    <li>
+                        <a href="index.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- LIVE AUCTION -->
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- COMMUNITY/LIVE STREAMING -->
+                <ul>
+                    <li>
+                        <a id = "headset" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-headset"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- CART -->
+                <ul>
+                    <li>
+                        <a href="cart.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- SETTINGS -->
+                <ul>
+                    <li>
+                        <a id = "settings" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!--CONTENT START-->
+            <section class="main">
+                
+                <!--HERO START-->
+                <article class = "hero-container">
+                    <span>
+                        <h2>About Us</h2>
+                        <p>At GameHub, we believe in delivering the best gaming experience by offering</p>
+                        <p>a massive collection of video games for every platform — PC, console, or mobile.</p>
+                    </span>
+                </article>
+                
+                <!--OUR WORK, SECTION START-->
+                <article class = "about-container">
+                    <!--TOP-->
+                    <div class = "content">
+                        <!--TOP IMG-->
+                        <span class = "image">
+                            <img class = "img1" src = "imgs/workmeeting.jpg" alt = "workplace-img">
+                        </span>
+
+                        <!--TOP TXT-->
+                        <span class = "text">
+                            <h2>Our Work</h2>
+                            <hr>
+                            <p> Our online marketplace is designed with gamers in mind, 
+                                giving you access to a huge range of titles at unbeatable prices. 
+                                From the latest blockbusters to hidden indie gems, 
+                                there is something for everyone at GameHub.</p>
+                                    
+                            <p> We pride ourselves on being more than just a store; 
+                                we make selling your games easy with our <b>Live Auction</b> feature!</p>
+                        </span>
+                    </div>
+
+                    <!--BOTTOM-->
+                    <div class = "content">
+                        <!--BOTTOM TXT-->
+                        <span class = "text">
+                            <p> <b>Live Auction</b> option lets you sell your games in real-time, 
+                                where buyers can bid for your titles. Whether you are looking to 
+                                get top dollar for a rare find or just clear out some shelf space, 
+                                our auction system ensures you stay in control.</p>
+                                    
+                            <p> Best of all, you can <b>easily track your auctions</b> on the go, right from your phone. 
+                                No need for a computer — GameHubs mobile-friendly platform makes it simple to 
+                                monitor bids, update listings, and manage your sales from anywhere.</p>
+                                    
+                                    
+                            <p> So whether you're looking to expand your collection or sell your old favorites, 
+                                GameHub is your go-to platform. <b>Let us level up your gaming experience!</b></p>
+                        </span>
+
+                        <!--SECOND IMG-->
+                        <span class = "image">
+                            <img class = "img2" src = "imgs/personcoding.jpg" alt = "person coding">
+                        </span>
+                    </div>
+                </article>
+                <!--OUR WORK, SECTION END-->
+
+
+                <!--GOALS, SECTION START-->
+                <article class="goals">
+                    <!--TITLE-->
+                    <span class = "title"><h2>Our Goals</h2></span>
+
+                    <!--GOALS-->
+                    <div class="goal-items">
+                        <div class="goal-item">Build a Thriving Resale Marketplace</div>
+                        <div class="goal-item">Enhance User Experience</div>
+                        <div class="goal-item">Foster a Trustworthy Environment</div>
+                        <div class="goal-item">Promote Sustainable Gaming</div>
+                    </div>
+                </article>
+                <!--GOALS, SECTION END-->
+
+
+                <!--TEAM MEMBERS, SECTION START-->
+                <article class="team">
+                    <!--TITLE-->
+                    <span class="title">
+                        <h2>Our Team</h2>
+                    </span>
+
+                    <!--TEAM MEMBERS-->
+                    <div class="team-members">
+                        <!--FIRST MEMEBER-->
+                        <div class="team-member">
+                            <!--Picture of Member-->
+                            <img src="imgs/teamleader.png" alt = "Sophia Mitchell">
+                            
+                            <div class="info-box">
+                                <!--Info About Member-->
+                                <span>
+                                    <h3>Sophia Mitchell</h3>
+                                    <p>Team Leader</p>
+                                </span>
+
+                                <!--Social Media Logos-->
+                                <div class="logos">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <i class="fa-brands fa-square-github"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--SECOND MEMBER-->
+                        <div class="team-member">
+                            <!--Picture of Member-->
+                            <img src="imgs/member1.png" alt = "Ethan Parker">
+                            
+                            <div class="info-box">
+                                <!--Info About Member-->
+                                <span class = "text">
+                                    <h3>Ethan Parker</h2>
+                                    <p>Front-End Developer</p>
+                                </span>
+                                
+                                <!--Social Media Logos-->
+                                <div class="logos">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <i class="fa-brands fa-square-github"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!--THIRD MEMBER-->
+                        <div class="team-member">
+                            <!--Picture of Member-->
+                            <img src="imgs/member2.png" alt = "Liam Bennett">
+
+                            <div class="info-box">
+                                <!--Info About Member-->
+                                <span class="text">
+                                    <h3>Liam Bennett</h3>
+                                    <p>Back-End Developer</p>
+                                </span>
+                                
+                                <!--Social Media Logos-->
+                                <div class="logos">
+                                    <i class="fa-brands fa-square-facebook"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <i class="fa-brands fa-square-github"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--TEAM MEMBERS, SECTION END-->
+
+                <!--OUR PARTNERS, SECTION START-->
+                <article class="partners">
+                    <span class = title>
+                        <h2>Our Partners</h2>
+                    </span>
+
+                    <div class="partner-logos">
+                        <img src="imgs/partner1.png" alt="TechCore">
+                        <img src="imgs/partner2.png" alt="NeonArcade">
+                        <img src="imgs/partner3.png" alt="GameVault">
+                        <img src="imgs/partner4.png" alt="NextPlay">
+                        <img src="imgs/partner5.png" alt="GameTrust">
+                    </div>
+                </article>
+                <!--OUR PARTNERS, SECTION END-->
+
+            </section>
+        <!--CONTENT END--> 
+
+        </main>
+        <!--MAIN END-->
+
+        
+        <!-- FOOTER START -->
+        <footer class="footer">
+
+            <!-- Logo and About Section -->
+            <section class="footer-logo">
+                <a href = "index.html">
+                    <img src="imgs/logo.png" alt="GameHub Logo">
+                </a>
+                <p>© 2015 Gamehub, Inc. All Rights Reserved</p>
+            </section>
+
+            <section class="footer-links">
+                <!-- About Section -->
+                <article class="footer-section about">
+                    <a href = "about.html"> About Us</a>
+                    <p>Privacy & Policy</p>
+                    <p>Terms of Use</p>
+                </article>
+
+                <!-- Contact Section -->
+                <article class="footer-section contact">
+                    <a href = "contact.html"> Contact Us </a>
+                    <p><span> <i class="fa-solid fa-location-dot"></i> </span>Møllerparken 4, 0459 Oslo, Norway</p>
+                    <p><span><i class="fa-solid fa-envelope"></i> </span>example@student.noroff.no</p>
+                </article>
+            </section>
+            
+
+            <!-- Newsletter Section -->
+            <section class = "news-pay-container">
+                <span> <h5>Newsletter SignUp</h5> </span>
+                <div class="newsletter-container">
+                    <form action = "">
+                        <input type="text" placeholder = "E-mail...">
+                    </form>
+                    <button class = "newsletter-btn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                </div>
+                
+                <div class="payment-methods">
+                    <img src="imgs/visa.png" alt="Visa">
+                    <img src="imgs/mastercard.png" alt="Mastercard">
+                    <img src="imgs/paypal.png" alt="PayPal">
+                    <img src="imgs/a-pay.png" alt="Apple Pay">
+                    <img src="imgs/g-pay.png" alt="Google Pay">
+                    <img src="imgs/vipps.png" alt="Vipps">
+                </div>
+            </section>
+
+        </footer>
+        <!--FOOTER END-->
+    </body>
+</html> 

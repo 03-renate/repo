@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title></title> 
+        <!--using viewport to tell how width and content should be displayed inside the device, 
+        content width tells the edge of website to follow edge of device, 
+        initial scale tells to scale the content inside the website so it matches the device-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"> 
+        <link rel = "stylesheet" href = "cart.css">
+        <script src = "https://kit.fontawesome.com/49c1127b94.js" crossorigin = "anonymous"></script>
+        <script type = "text/javascript" src = "nav.js" defer> </script>
+    </head>
+
+    <body>
+        <header>
+            <!--NAV START-->
+            <nav class = "nav">
+                <ul>
+                    <!-- LOGO -->
+                    <li class = "logo">
+                        <a role = "logo" href="index.html" class = "logo-img">
+                            <img src = "imgs/logo.png" alt = "logo">
+                        </a>
+                    </li>
+
+                    <!--MENU-->
+                    <li class = "menu">
+                        <i class="fa-solid fa-bars"></i> 
+                    </li>
+
+                    <!-- SEARCH -->
+                    <li class="search-container">
+                        <form action = "">
+                            <input type = "text" placeholder = "Search...">
+                        </form>
+                        <button class = "search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </li>
+
+                    <!-- NOTIFICATION, HELP & PROFILE -->
+                    <li class="profile-container"> 
+                            <i class="fa-solid fa-bell"></i>
+                            <i class="fa-regular fa-circle-question"></i>
+                            <div class = "profile-box">
+                                <img src = "imgs/profile.png" alt = "profile-pic">
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--MOBILE SIDEBAR START-->
+            <nav id = "mobile" class = "mobile">
+                <ul class = "mobile-list">
+                    <!--HOME-->
+                    <li>
+                        <a href="index.html" class="mobile-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                
+                    <!-- LIVE AUCTION -->
+                    <li>
+                        <a href="auction.html" class="mobile-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+
+                    <!-- CART -->
+                    <li>
+                        <a href="cart.html" class="mobile-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- MOBILE NAV END-->
+        </header>
+            <!--NAV END-->
+
+        <!-- MAIN START -->
+        <main>
+            <!--DESKTOP SIDEBAR START-->
+            <aside id = "sidebar" class = "sidebar">
+                <!--HOME-->
+                <ul class = "sidebar-list">
+                    <li>
+                        <a href="index.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- LIVE AUCTION -->
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- COMMUNITY/LIVE STREAMING -->
+                <ul>
+                    <li>
+                        <a id = "headset" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-headset"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- CART -->
+                <ul>
+                    <li>
+                        <a href="cart.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- SETTINGS -->
+                <ul>
+                    <li>
+                        <a id = "settings" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+
+            <!--CONTENT START-->
+            <section>
+                <article class = "container">
+                    <!--CART-->
+                    <div class = "cart-container">
+                        <!--List of Items-->
+                        <div class = "list">
+                            <!--TITLE-->
+                            <span class = "title">
+                                <ul>
+                                    <li class = "back"> 
+                                        <a href = "index.html"> 
+                                            <i class="fa-solid fa-arrow-left"></i> 
+                                        </a>
+                                    </li>
+                                    <li class = "text"><h3>My Cart</h3></li>
+                                </ul>
+                            </span>
+
+                            <!--ITEMS-->
+                            <span class = "item">
+                                <div>
+                                    <img src = "imgs/pingpong.jpg" alt = "product">
+                                </div>
+
+                                <span class = "info">
+                                    <h4>Ping Pong</h4>
+                                    <p>150kr</p>
+                                </span>
+
+                                <span class = "icon">
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </span>
+                            </span>
+
+                            <span class = "total">
+                                <h3>Total:</h3>
+                                <h3>150kr</h3>
+                            </span>
+
+                            <button class = "btn"><a href = "checkout.html">checkout</a></button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--CONTENT END-->
+        </main>
+        <!--MAIN END-->
+
+        <!-- FOOTER START -->
+        <footer class="footer">
+
+            <!-- Logo and About Section -->
+            <section class="footer-logo">
+                <a href = "index.html">
+                    <img src="imgs/logo.png" alt="GameHub Logo">
+                </a>
+                <p>© 2015 Gamehub, Inc. All Rights Reserved</p>
+            </section>
+
+            <section class="footer-links">
+                <!-- About Section -->
+                <article class="footer-section about">
+                    <a href = "about.html"> About Us</a>
+                    <p>Privacy & Policy</p>
+                    <p>Terms of Use</p>
+                </article>
+
+                <!-- Contact Section -->
+                <article class="footer-section contact">
+                    <a href = "contact.html"> Contact Us </a>
+                    <p><span> <i class="fa-solid fa-location-dot"></i> </span>Møllerparken 4, 0459 Oslo, Norway</p>
+                    <p><span><i class="fa-solid fa-envelope"></i> </span>example@student.noroff.no</p>
+                </article>
+            </section>
+            
+
+            <!-- Newsletter Section -->
+            <section class = "news-pay-container">
+                <span> <h5>Newsletter SignUp</h5> </span>
+                <div class="newsletter-container">
+                    <form action = "">
+                        <input type="text" placeholder = "E-mail...">
+                    </form>
+                    <button class = "newsletter-btn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                </div>
+                
+                <div class="payment-methods">
+                    <img src="imgs/visa.png" alt="Visa">
+                    <img src="imgs/mastercard.png" alt="Mastercard">
+                    <img src="imgs/paypal.png" alt="PayPal">
+                    <img src="imgs/a-pay.png" alt="Apple Pay">
+                    <img src="imgs/g-pay.png" alt="Google Pay">
+                    <img src="imgs/vipps.png" alt="Vipps">
+                </div>
+            </section>
+
+        </footer>
+        <!--FOOTER END-->
+    </body>
+</html> 

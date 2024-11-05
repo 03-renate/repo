@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title></title> 
+        <!--using viewport to tell how width and content should be displayed inside the device, 
+        content width tells the edge of website to follow edge of device, 
+        initial scale tells to scale the content inside the website so it matches the device-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"> 
+        <link rel = "stylesheet" href = "index.css">
+        <script src = "https://kit.fontawesome.com/49c1127b94.js" crossorigin = "anonymous"></script>
+        <script type = "text/javascript" src = "nav.js" defer> </script>
+    </head>
+
+    <body>
+        <header>
+            <!--NAV START-->
+            <nav class = "nav">
+                <ul>
+                    <!-- LOGO -->
+                    <li class = "logo">
+                        <a role = "logo" href="index.html" class = "logo-img">
+                            <img src = "imgs/logo.png" alt = "logo">
+                        </a>
+                    </li>
+
+                    <!--MENU-->
+                    <li class = "menu">
+                        <i class="fa-solid fa-bars"></i> 
+                    </li>
+
+                    <!-- SEARCH -->
+                    <li class="search-container">
+                        <form action = "">
+                            <input type = "text" placeholder = "Search...">
+                        </form>
+                        <button class = "search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </li>
+
+                    <!-- NOTIFICATION, HELP & PROFILE -->
+                    <li class="profile-container"> 
+                            <i class="fa-solid fa-bell"></i>
+                            <i class="fa-regular fa-circle-question"></i>
+                            <div class = "profile-box">
+                                <img src = "imgs/profile.png" alt = "profile-pic">
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--MOBILE SIDEBAR START-->
+            <nav id = "mobile" class = "mobile">
+                <ul class = "mobile-list">
+                    <!--HOME-->
+                    <li>
+                        <a href="index.html" class="mobile-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                
+                    <!-- LIVE AUCTION -->
+                    <li>
+                        <a href="auction.html" class="mobile-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+
+                    <!-- CART -->
+                    <li>
+                        <a href="cart.html" class="mobile-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- MOBILE NAV END-->
+        </header>
+            <!--NAV END-->
+
+        <!-- MAIN START -->
+        <main>
+            <!--DESKTOP SIDEBAR START-->
+            <aside id = "sidebar" class = "sidebar">
+                <!--HOME-->
+                <ul class = "sidebar-list">
+                    <li>
+                        <a href="index.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- LIVE AUCTION -->
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- COMMUNITY/LIVE STREAMING -->
+                <ul>
+                    <li>
+                        <a id = "headset" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-headset"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- CART -->
+                <ul>
+                    <li>
+                        <a href="cart.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- SETTINGS -->
+                <ul>
+                    <li>
+                        <a id = "settings" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <section class = "main">
+                <!-- HERO START -->
+                <section class = "hero-container">
+                    <article class = "hero-img">
+                        <img src ="imgs/hero-img.png" alt = "sale">
+                    </article>
+                    <article class = "hero-text">
+                        <h2>SUPER SALE</h3>
+                        <h1>CYBER WEEKEND</h1>
+                        <h2>UP TO</h2>
+                        <h1>70% OFF</h1>
+                        <button href = "#" class = "hero-btn"> 
+                            <span> <h4>Shop Now</h4>  </span>
+                        </button>
+                    </article>
+                </section>
+                <!-- HERO END -->
+
+                <!--GENRE-LIST START-->
+                <section class="genres">
+                    <span class = "title"> <h3>Popular Genres</h3> </span>
+                    <span class = "genre-imgs">
+                        <img src = "imgs/Adventure.png" alt = "adventure">
+                        <img src = "imgs/Puzzle.png" alt = "adventure">
+                        <img src = "imgs/Chance.png" alt = "adventure">
+                        <img src = "imgs/Strategy.png" alt = "adventure">
+                        <img src = "imgs/Fantasy.png" alt = "adventure">
+                        <img src = "imgs/Horror.png" alt = "adventure">
+                    </span>
+                </section>
+                <!--GENRE END-->
+
+                <!-- TRENDING-LIST START -->
+                <section class="content-container">
+                    <!-- TITLE -->
+                    <span class = "title"> <h3>Trending Now</h3> </span>
+                    
+                    <!-- FIRST ITEM -->
+                    <section class = "container">
+                        <article class = "card">
+                            <button class = "favorite"> <i class = "fa-regular fa-heart"></i> </button>
+                            <img src = "imgs/pingpong.jpg" alt = "Game Cover"> <h5>PingPong</h5> 
+                            <span class = "genre"> <h5>Genre: Kids</h5> </span>
+                            <div class = "rating">
+                                <span class = "star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.7</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href = "product.html" class="buy-button"> <h4>150kr</h4> </a>
+                        </article>
+
+                        <!--SECOND ITEM-->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/boxer.jpg" alt="Game Cover">
+                            <h4>Boxer</h4>                
+                            <span class="genre"> <h5>Genre: Action</h5> </span>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+                        
+                        <!--THIRD ITEM-->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/spacewar.jpg" alt="Game Cover">
+                            <h4>Space War</h4>
+                            <span class="genre"> <h5>Genre: Fantasy</h5> </span>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i></span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+                        
+                        <!-- FOURTH ITEM -->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/assassin.jpg" alt="Game Cover">
+                            <h4>Assassin</h4>
+                            <span class="genre"> <h5>Genre: Action</h5> </span>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+
+                        <!-- FIFTH ITEM -->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/furious.jpg" alt="Game Cover">
+                            <h4>Racing</h4>
+                            <span class="genre"> <h5>Genre: Action</h5> </span>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5></span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5></span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+                    </section>
+                </section>
+                <!--TRENDING-LIST END-->
+
+                <!-- TOP STREAMER-LIST START -->
+                <section class="streamers">
+                    <!--TITLE-->
+                    <span class="title"> <h3>Top Streamers</h3> </span>
+
+                    <!--LIST OF STREAMERS-->
+                    <div class="streamers-list">
+
+                        <!--FIRST-->
+                        <div class="streamer">
+                            <div class="avatar">
+                                <img src = "imgs/user1.png" alt="profile picture">
+                            </div>
+
+                            <div class = "info">
+                                <span class="username"> <h5>Demon_slayer</h5> </span>
+                                <button class="follow-button"> <h5>Follow</h5> </button>
+                            </div>
+                        </div>
+
+
+                        <!--SECOND-->
+                        <div class="streamer">
+                            <div class="avatar">
+                                <img src = "imgs/user2.png" alt = "profile picture">
+                            </div>
+
+                            <div class = "info">
+                                <span class="username"> <h5>Monkey_D_Luffy</h5> </span>
+                                <button class="follow-button"> <h5>Follow</h5> </button>
+                            </div>
+                        </div>
+
+
+                        <!--THIRD-->
+                        <div class="streamer">
+                            <div class="avatar">
+                                <img src = "imgs/user3.png" alt="profile picture">
+                            </div>
+
+                            <div class = "info">
+                                <span class="username"> <h5>Azraelion</h5> </span>
+                                <button class="follow-button"> <h5>Follow</h5> </button>
+                            </div>
+                        </div>
+
+
+                        <!--FOURTH-->
+                        <div class="streamer">
+                            <div class="avatar">
+                                <img src = "imgs/user4.png" alt = "profile picture">
+                            </div>
+
+                            <div class = "info">
+                                <span class="username"> <h5>Boar_Hat</h5> </span>
+                                <button class="follow-button"> <h5>Follow</h5> </button>
+                            </div>
+                        </div>
+
+                      <!--FIFTH-->
+                        <div class = "streamer">
+                            <div class="avatar">
+                                <img src = "imgs/user5.png" alt = "profile picture">
+                            </div>
+
+                            <div class = "info">
+                                <span class="username"> <h5>ShroomDash</h5> </span>
+                                <button class="follow-button"> <h5>Follow</h5> </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- TOP STREAMER-LIST END -->
+
+                <!-- BEST SELLERS-LIST START -->
+                <section class="content-container">
+                    <!-- TITLE -->
+                    <span class = "title"> <h3>Best Sellers</h3> </span>
+                    
+                    <!-- FIRST ITEM -->
+                    <section class = "container">
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/superduper.jpg" alt="Game Cover"> <h4>Super Duper</h4> 
+                            <span class="genre"> <h5>Genre: Kids</h5> </span>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.7</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+
+                        <!--SECOND ITEM-->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/forgelegend.jpg" alt="Game Cover"> <h4>ForgeLegend</h4>                
+                            <span class="genre"> <h5>Genre: Fantasy</h5> </span>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+                        
+                        <!--THIRD ITEM-->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/cyberpunk.jpg" alt="Game Cover"> <h4>CyberPunk</h4>
+                            <span class="genre"> <h5>Genre: Action</h5> </span>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i></span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+                        
+                        <!-- FOURTH ITEM -->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/black.jpg" alt="Game Cover"> <h4>Black</h4>
+                            <div class="genre"> <h5>Genre: Horror</h5> </div>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5> </span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5> </span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+
+                        <!-- FIFTH ITEM -->
+                        <article class="card">
+                            <button class="favorite"> <i class="fa-regular fa-heart"></i> </button>
+                            <img src="imgs/racing.jpg" alt="Game Cover">
+                            <h4>Racing</h4>
+                            <div class="genre"> <h5>Genre: action</h5> </div>
+                            <div class="rating">
+                                <span class="star"> <i class="fa-solid fa-star"></i> </span>
+                                <span> <h5>4.4</h5></span>
+                                <span class="downloads"> <i class="fa-regular fa-circle-down"></i> </span>
+                                <span> <h5>120 k</h5></span>
+                            </div>
+                            <a href="#" class="buy-button"> <h4>BUY</h4> </a>
+                        </article>
+                    </section>
+                </section>
+                <!-- BEST SELLERS-LIST END -->
+            </section>
+        </main>
+
+        <!-- FOOTER START -->
+        <footer class="footer">
+
+            <!-- Logo and About Section -->
+            <section class="footer-logo">
+                <a href = "index.html">
+                    <img src="imgs/logo.png" alt="GameHub Logo">
+                </a>
+                <p>© 2015 Gamehub, Inc. All Rights Reserved</p>
+            </section>
+
+            <section class="footer-links">
+                <!-- About Section -->
+                <article class="footer-section about">
+                    <a href = "about.html"> About Us</a>
+                    <p>Privacy & Policy</p>
+                    <p>Terms of Use</p>
+                </article>
+
+                <!-- Contact Section -->
+                <article class="footer-section contact">
+                    <a href = "contact.html"> Contact Us </a>
+                    <p><span> <i class="fa-solid fa-location-dot"></i> </span>Møllerparken 4, 0459 Oslo, Norway</p>
+                    <p><span><i class="fa-solid fa-envelope"></i> </span>example@student.noroff.no</p>
+                </article>
+            </section>
+            
+
+            <!-- Newsletter Section -->
+            <section class = "news-pay-container">
+                <span> <h5>Newsletter SignUp</h5> </span>
+                <div class="newsletter-container">
+                    <form action = "">
+                        <input type="text" placeholder = "E-mail...">
+                    </form>
+                    <button class = "newsletter-btn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                </div>
+                
+                <div class="payment-methods">
+                    <img src="imgs/visa.png" alt="Visa">
+                    <img src="imgs/mastercard.png" alt="Mastercard">
+                    <img src="imgs/paypal.png" alt="PayPal">
+                    <img src="imgs/a-pay.png" alt="Apple Pay">
+                    <img src="imgs/g-pay.png" alt="Google Pay">
+                    <img src="imgs/vipps.png" alt="Vipps">
+                </div>
+            </section>
+        </footer>
+        <!--FOOTER END-->
+    </body>
+</html>
+
+<!--MENU-->
+                <!--<ul>
+                    <li onclick = showSidebar() class = "menu">
+                        <a role = "menu" href="index.html" class = "menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li onclick = hideSidebar() class = "close-btn">
+                        <button> <i class="fa-solid fa-xmark"></i> </button>
+                    </li>
+                </ul> -->

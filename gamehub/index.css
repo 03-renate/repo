@@ -1,0 +1,685 @@
+@import "_variables.css";
+
+/*==== Universal selector - applies styles to all elements ====*/
+*{
+    padding: 0; /* Removes default padding for consistency */
+    margin: 0; /* Removes default margin for consistency */
+    box-sizing: border-box; /* Ensures padding and borders are included in element's width/height */
+    scroll-behavior: smooth; /* Smooth scrolling when navigating within the page */
+}
+
+
+/*==== Styles for the body element ====*/
+body{
+    height: 100dvh; /* Sets body height to 100% of the viewport height in dynamic units */
+    width: 100vw;
+    background-color: var(--dark-blue); /* Sets body background */                    
+
+    /* Sets up a grid layout for child elements (header, main, and footer) */
+    display: grid;
+    grid-template-columns: auto; /* Single column layout */
+    grid-template-rows: auto auto auto; /* Each row (header, main, footer) can grow independently */
+    grid-template-areas: /* Defines named areas for each section */
+        "layout-header" 
+        "main"
+        "footer";
+}
+
+
+/*==== Styles for the header, main and footer ====*/
+header{
+    grid-area: layout-header; /* Assigns header to the designated grid area */
+    width: 100%; /* Ensures header spans the full width of the body */
+}
+
+
+main{
+    grid-area: main; /* Assigns main content to the designated grid area */
+    margin: 0 auto; /* Centers main content horizontally */
+    padding: 0 92px;  /*Adds horizontal padding to main content */
+    width: 100%;
+
+}
+
+
+footer{
+    grid-area: footer; /* Assigns footer to the designated grid area */
+    width: 100%;
+}
+
+
+/*==== Styles for the top navbar ====*/
+.nav{
+    width: 100%; /* Full width navigation bar */
+    position: fixed; /* Fix the navbar at the top of the page */
+    top: 0; /* Align the navbar to the top */
+    height: 4.5rem; /* Using rem for responsive scaling */
+    background-color: var(--blue); /* Useing custom variable for background color */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+.nav ul{
+    height: 100%; /* Set maximum height of list */
+    width: 100%;
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Flex layout for horizontal list */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+
+.nav .logo{
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+.nav .menu{
+    display: none; /* Hides menu button on desktop, since I only want it on mobile */
+}
+
+
+/*==== Styles for the logo in top navbar ====*/
+.logo-container{
+    display: flex; /* Flex layout to align logo items */
+}
+
+.logo{
+    display: flex; /* Flex layout for the logo */
+    align-items: baseline; /* Align items to baseline (for text alignment) */
+}
+
+.logo-img{
+    position: relative; /* Allows positioning within a container */
+    height: 4.5rem;
+    width: 4.5rem;
+    margin: 0 1.875rem; /* Spacing around the logo, using rem for responsive spacing */
+    text-decoration: none; /* Remove underline from links */
+    display: flex; /* Flex layout for child alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.logo-img img{
+    width: 100%; /* Set image width */
+    border-radius: 6px; /* Rounded corners for the logo image */
+}
+
+
+/*==== Styles for the search input field ====*/
+.search-container{
+    width: max-content;
+    display: flex; /* Flex layout for horizontal items */
+    align-items: center; /* Center items vertically */
+    padding: 0.5rem; /* Inner spacing */
+    border: 0.2rem solid transparent; /* Transparent border to allow gradient effect */
+    border-radius: 100px; /* Rounded edges for the container */
+    background: 
+        linear-gradient(#0E0C1D,#0E0C1D) padding-box, /* Padding - box -> Colour goes to the edge of diff */
+        linear-gradient(to right top, #FF5436, #6A0DAD) border-box; /* Border-box -> Gradient will go to the edge of the border */
+    border-width: 0.2rem; /* Width of gradient border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+.search-container form{
+    width: 100%; /* Full width form within container */
+}
+
+/* This code-snip is for the input-box */
+.search-container input{
+    height: 1rem; /* Set height for the input */
+    width: 100%;
+    border: none; /* Remove default border */
+    padding: 0; /* Remove default padding */
+    color: var(--white); /* Text color */
+    background-color: var(--dark-blue); /* Input background color */
+    font-family: "body"; /* Custom font family */
+}
+
+/* This code-snip is for the magnifying glass */
+.search{
+    min-width: 1.875rem;
+    height: 1rem;
+    border: none; /* Remove default border */
+    z-index: 20; /* Elevates element above others */
+    color: var(--white); /* Text color */
+    background-color: transparent;
+}
+
+
+/*==== Styles for the bell-, help-, and profile icon ====*/
+.profile-container{
+    display: flex; /* Flex layout for horizontal items */
+    align-items: center; /* Center items vertically */
+    margin: 0 1.875rem; /* Margin top, left and right, bottom */
+}
+
+.profile-container i{
+    margin-left: 1.875rem; /* Spacing to the left of icons */
+    font-size: 1.625rem; /* Icon size */
+}
+
+.profile-box{
+    height: 1.875rem; /* Set box height */
+    width: 1.875rem; /* Set box width */
+    border-radius: 50%; /* Circular shape */
+    margin-left: 1.875rem; /* Spacing to the left */
+}
+
+.profile-box img{
+    width: 100%; /* Full width image within box */
+    object-fit: contain; /* Maintain aspect ratio within box */
+}
+
+/*==== Styles for mobile ====*/
+.mobile{
+    display: none; /* Hide mobile-specific elements on desktop */
+}
+
+
+/*==== Styles for sidebar ====*/
+.sidebar{
+    position: fixed; /* Fixes sidebar to the left side of the screen */
+    top: 26vh; /* Use `vh` for vertical positioning */
+    left: 0; /* Aligns sidebar to the left edge */
+    height: max-content; /* Sidebar adjusts height based on content */
+    width: 4.5rem; /* Use rem units for better scalability across devices */
+    border-radius: 0 3.1875rem 3.1875rem 0; /* Rounded edges on right side */
+    background-color: var(--blue); /* Background-color */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+
+.sidebar li{
+    width: 100%; /* Full width list items within sidebar */
+    list-style: none; /* Remove default bullet points */
+    padding: 0.9375rem; /* Use rem for consistent padding */
+}
+
+.sidebar-link{
+    font-size: 1.875rem; /* Use rem for text size for scalability */
+}
+
+.sidebar i{
+    width: 100%; /* Icons take full width */
+}
+
+/*==== Styles for hero section ====*/
+.hero-container{
+    width: 70%; /* Sets width to fill the container (consider using 100vh if it should fill the viewport) */
+    display: flex; 
+}
+
+/* Left-side hero image area with background color */
+.hero-img{
+    flex: 1; /* Takes up 50% of the hero container */
+    background-color: var(--dark-purple); /* Backgorund colour behind image */
+}
+
+.hero-img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures image fits inside without cropping */
+}
+
+/* Right-side hero text area with center alignment */
+.hero-text{
+    flex: 1; /* Takes up 50% of the hero container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, #08D4DD,#250C33);
+}
+
+.hero-text h1{
+    color: var(--orange);
+}
+
+/* Hero button styling */
+.hero-btn{
+    height: 2.5rem; /* Fixed height for the button */
+    width: 12.5rem; /* Fixed width for the button */
+    border-radius: 6.25rem; /* Rounded shape */
+    border: none;
+    background: linear-gradient(to top left, #FF5436, #6A0DAD);
+    color: var(--white)
+}
+
+/* Hover effect for hero button */
+.hero-btn:hover{
+    background: transparent;
+    color: var(--orange); /* Changes text color on hover */
+    border: 0.188rem solid var(--orange); 
+    cursor: pointer; /* Changes cursor to pointer for clickable effect */
+}
+
+
+/*==== Styles for genre ====*/
+.genres {
+    padding: 1.875rem 0 1.875rem; /* Adds vertical padding for spacing: top and bottom */
+    display: flex; /* Arranges child elements (title and images) vertically */
+    flex-direction: column; /*puts imgs horozontaly*/ 
+    width: 100%;
+}
+
+/* Container for genre images */
+.genre-imgs{
+    display: flex;
+    gap: 2rem; /* Adds space between each image */
+    width: 95%;
+    overflow-x: auto;
+}
+  
+/* Individual genre image styling */
+.genres img {
+    width: 9.375rem; /* Picture size */
+}
+
+
+/*==== Styles for the list of top streamers ====*/
+.streamers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.streamers-list {
+    display: flex;
+    padding: 0.625rem;
+    gap: 3.125rem;
+    width: 70%;
+    overflow-x: auto;
+}
+
+.streamers-list::-webkit-scrollbar{
+    width: 0; /* Hides the scrollbar */
+}
+
+/* Individual streamer item styling */
+.streamer{
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
+
+/* Streamer information container */
+.info{
+    flex-direction: row;
+}
+
+.avatar{
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 6.25rem;
+}
+
+.avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Username text styling */
+.username {
+    text-align: start;
+    width: 100%;
+}
+
+/* Follow button styling */
+.follow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12.5rem;
+    height: auto;
+    background: linear-gradient(to top left, #FF5436, #6A0DAD);
+    color: var(--white);
+    border: none;
+    border-radius: 6.25rem;
+    cursor: pointer;
+}
+
+/* Follow button hover effect */
+.follow-button:hover {
+    background: linear-gradient(to top left, #ff0099, #ff6600);
+}
+
+
+/*==== Styles for trending now/best sellers list ====*/
+.content-container{
+    padding: 1.875rem 0px 4.375rem; /* Top, sides, bottom */
+    width: 100%;
+}
+
+/*card-container*/
+.container{
+    display: flex; /* ' flex-direction: row; ' -> We can set this as a comment since "default" display as row*/
+    width: 70%;
+    gap: 1.875rem;
+    overflow-x: auto;
+}
+
+.container::-webkit-scrollbar{
+    width: 0; /* Hide scrollbar */
+}
+
+/* Individual card-styling */
+.card {
+    height: auto; /* Fixed height for card size */
+    width: 100%; /* Fixed weight for card size */
+    padding: 1.25rem;
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping within the card */
+    border: 0.2rem solid transparent;
+    background: 
+        linear-gradient(#0E0C1D, #0E0C1D) padding-box,
+        linear-gradient(to right top, #FF5436, #6A0DAD) border-box;
+    
+}
+
+/* Product image */
+.card img {
+    width: 6.25rem;
+}
+
+/* Heart button */
+.card .favorite {
+    display: block;
+    border: none;
+    font-size: x-large;
+    background-color: transparent;
+    color: var(--heart);
+}
+
+/* Star, rating, download */
+.card .rating {
+    display: flex;
+    align-items: baseline;
+    gap: 0.625rem; /* Adds space */
+}
+
+.card .rating .star {
+    color: var(--star);
+}
+
+.card .rating .downloads {
+    color: var(--white);
+}
+
+/* Buy-button */
+.card .buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    text-decoration: none; /* Since our button has a link, we want to remove default underline */
+    background-image: linear-gradient(to bottom right, #FF5436,#6A0DAD);
+    border-radius: 100px;
+}
+
+/* Buy-button when hovering */
+.card .buy-button:hover {
+    background: transparent;
+    border: 0.2rem solid transparent;
+    background: 
+        linear-gradient(#0E0C1D, #0E0C1D) padding-box,
+        linear-gradient(to right top, #FF5436, #6A0DAD) border-box;
+}
+
+
+/*==== Styles for footer ====*/
+.footer {
+    display: flex; /*This is for the content inside footer*/
+    align-items: center;
+    padding: 1.875rem;
+    gap: 1.875rem;
+    background-color: var(--blue);
+}
+
+.footer-section {
+    flex-direction: column; /* Stack items vertically */
+}
+
+/*==== Styles for logo ====*/
+.footer-logo {
+    flex-grow: 0.4; /* Flex ratio for logo, footer content */
+    text-align: center; /* Center the logo text */
+}
+
+.footer-logo img {
+    width: 6.25rem; 
+}
+
+
+/*==== Styles for about and contact ====*/
+.footer .contact, .footer .about {
+    flex: 2; /* Flex ratio for contact and about sections, footer content */
+}
+
+.footer-links{
+    display: flex; /* This is for the contact and about links */
+}
+
+.contact, .about{
+    flex: 1; /* Flex ratio for individual sections */
+}
+
+
+/*==== Styles for newsletter and payment methods ====*/
+.news-pay-container{
+    flex: 1; /* Flex ratio for newsletter and payment section, footer content */
+}
+
+.newsletter-container{
+    width: max-content; /* Adjust width to content size */
+    display: flex;
+    padding: 0.5rem;
+    border: 0.2rem solid transparent;
+    border-radius: 100px;
+    background: 
+        linear-gradient(#0E0C1D,#0E0C1D) padding-box,
+        linear-gradient(to right top, #FF5436, #6A0DAD) border-box;
+}
+
+.newsletter-container form{
+    position: relative; /* Positioning context for child elements */
+    width: 100%; /* Full width for form */
+}
+
+/*input-box*/
+.newsletter-container input{
+    height: 1.5rem;
+    display: flex;
+    align-items: center; /* Center text vertically */
+    width: 100%;
+    background-color: var(--dark-blue);
+    border: none;
+    padding: 0.5rem;
+    color: var(--white);
+    font-family: "body";
+}
+
+/*submit-btn*/
+.newsletter-btn{
+    min-width: 1.875rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    color: var(--white); /* Button text color */
+    background-color: transparent;
+    border: none; /* Removing defualt border around icon */
+}
+
+/*container*/
+.payment-methods {
+    display: flex;
+    gap: 0.625rem; /* Space between payment method images */
+    margin-top: 0.625rem;
+}
+
+/*imgs*/
+.payment-methods img {
+    width: 1.875rem;
+    height: auto; /* Maintain aspect ratio */
+    background-color: white; /* Background color for images */
+    object-fit: contain; /* Maintain image aspect ratio */
+}
+
+
+/*==== Styles for mobile version ====*/ /* only include the code you want to change, this goes from phone to tablet*/
+@media only screen and (max-width: 430px){
+    main{
+        padding: 50px 20px;
+    }
+    /*==== Styles for top navbar ====*/
+    .nav{
+        height: 60px;
+        border-end-end-radius: 50px; /*bottom left corner of nav*/
+        border-end-start-radius: 50px; /*bottom right corner of nav*/
+    }
+
+    .nav li{
+        font-size: 26px;
+    }
+
+    .nav .logo, .profile-box{
+        display: none;
+    }
+
+    .nav .menu{
+        margin: 0px 30px 0px;
+        display: flex;
+        font-size: 30px;
+        color: var(--white);
+    }
+
+    .search-container{
+        height: 2.2rem;
+    }
+    
+    .search-container form{
+        width: auto; /* Full width form within container */
+    }
+    
+    /* This code-snip is for the input-box */
+    .search-container input{
+        height: auto; /* Set height for the input */
+        width: auto;
+    }
+    
+    /* This code-snip is for the magnifying glass */
+    .search{
+        min-width: auto;
+        height: auto;
+    }
+
+    /*==== Styles for bottom navbar ====*/
+    .mobile {
+        width: 100%; /* Using full width */
+        height: 60px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center; /* Centering icons vertically */
+        justify-content: center; /* Centering the list horizontally */
+        border-start-start-radius: 50px; /* Top left corner of nav */
+        border-start-end-radius: 50px; /* Top right corner of nav */
+        color: var(--white); /* Icon color */
+        background-color: var(--blue); /* Nav container color */
+        z-index: 1;
+    }
+    
+    .mobile-list {
+        display: flex;
+        list-style: none; /* Removing bullet points */
+        width: 100%; /* Ensuring the list takes up full width */
+        justify-content: space-around; /* Distribute icons with equal space around */
+        padding: 0;
+        margin: 0;
+    }
+    
+    .mobile i {
+        font-size: 30px; /* Size of icons */
+    }
+
+    /*==== Styles for sidebar ====*/
+    .sidebar{
+        display: none; /*removing sidebar*/
+    }
+
+    /*==== Styles for checkout-container ====*/
+    .contact-content {
+        display: block;
+        margin-top: 50px;
+    }
+    
+    .contact-info {
+        display: block;
+        background: transparent;
+        padding: 10px 0 50px;
+        border-radius: 10px 0px 0px 10px;
+    }
+    
+    .contact-info h2{
+        margin: 0;
+    }
+    
+    .info-item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin: 15px;
+    }
+    
+    .info-item .item-list{
+        align-items: flex-start;
+    }
+    
+    .info-item i{
+        color: var(--pink);
+        font-size: 26px;
+    }
+    
+    .social-media a {
+        color: var(--pink);
+    }
+    
+    /* Contact us form */
+    .contact-container {
+        flex: block;
+        background: #CEF3FF;
+        border-radius: 10px;
+    }
+
+    .contact-title{
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        background: linear-gradient(to left, #B81A5E, #95118B, #7209B7);
+    }
+
+    /*==== Styles for footer ====*/
+    .footer{
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .footer-logo{
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 50px; /* Space between the lists */
+    }
+
+    .news-pay-container{
+        display: none; /*removing this to give less information to the user, and for more space*/
+    }
+    /*==== END: FOOTER ====*/
+}
+/*==== END: MOBILE VERSION ====*/

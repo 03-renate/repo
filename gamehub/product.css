@@ -1,0 +1,592 @@
+@import "_variables.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh; /*using min-height so body can grow if there's more content*/
+    background-color: var(--dark-blue);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "layout-header" 
+        "main"
+        "footer";
+}
+
+header{
+    display: flex;
+    width: 100%;
+    grid-area: layout-header;
+}
+
+main{
+    grid-area: main;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 92px;
+}
+
+footer{
+    display: flex;
+    grid-area: footer;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 5px;
+}
+
+/*==== START: HEADER ====*/
+/*==== START: NAV ====*/
+.nav{
+    width: 100%;
+    position: fixed;
+    height: 72px;
+    background-color: var(--blue);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav ul{
+    max-height: 100%;
+    max-width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.nav li:first-child{
+    margin-right: auto;
+}
+
+/*=== END: NAV ====*/
+
+
+/*==== START: LOGO ====*/
+.logo-container{
+    display: flex;
+    align-items: flex-start;
+}
+
+.logo{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.logo-img{
+    position: relative;
+    height: 72px;
+    width: 72px;
+    margin: 0px 30px 0px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img img{
+    width: 72px;
+    border-radius: 6px;
+}
+/*==== END: LOGO ====*/
+
+/*==== START: SEARCH ====*/
+.search-container{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1rem solid transparent; /*since we set border color transparent, it will show our gradient beneth*/
+    border-radius: 100px;
+    background: 
+        linear-gradient(#0E0C1D,#0E0C1D) padding-box, /*paddin-box -> color goes to the edge of diff*/
+        linear-gradient(to right top, #FF5436, #6A0DAD) border-box; /*border-box -> gradient will go to the edge of the border*/
+    border-width: 0.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--dark-blue);
+}
+
+.search-container form{
+    position: relative;
+    width: 100%;
+}
+
+/*SEARCH INPUT BOX*/
+.search-container input{
+    height: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark-blue);
+    border: none;
+    padding: 0;
+    color: var(--white);
+    font-family: "body";
+    font-size: 1rem;
+}
+
+/*SEARCH ICON*/
+.search{
+    min-width: 30px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    color: var(--white);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+/*==== END: SEARCH ====*/
+
+/*==== START: ICONS ====*/
+.profile-container{
+    display: flex;
+    align-items: center;
+    margin: 0px 30px 0px;
+}
+
+.profile-container i{
+    margin-left: 30px;
+    font-size: 26px;
+}
+
+.profile-box{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.profile-box img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.mobile{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+/*==== END: ICONS ====*/
+/*==== END: HEADER ====*/
+
+
+/*==== START: MAIN ====*/
+.main{
+    padding-left: 10px;
+}
+/*==== SIDEBAR ====*/
+.sidebar{
+    position: fixed;    
+    top: 26dvh;
+    left: 0;
+    height: max-content;
+    width: 72px;
+    border-radius: 0 51px 51px 0;
+    background-color: var(--blue);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.sidebar li{
+    width: 100%;
+    list-style: none;
+    padding: 15px;
+}
+
+.sidebar-link{
+    font-size: 30px;
+}
+
+.sidebar i{
+    width: 100%;
+}
+/*==== END:SIDEBAR ====*/
+
+/*==== START: MAIN ====*/
+/*==== START: PRODUCT ====*/
+.container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product{
+    flex: 1;
+}
+
+.product img{
+    width: 350px;
+}
+/*==== END: PRODUCT ====*/
+
+/*==== START: TITLE + BODY ====*/
+.info-container{
+    flex: 2;
+    height: auto;
+    width: auto;
+    padding: 200px 0px 200px;
+}
+
+/*Title*/
+.info-box ul{
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.info-box .title:last-child{
+    margin-left: auto;
+}
+
+.info-box .title i{
+    font-size: 26px;
+    margin-left: 15px;
+}
+
+#star{
+    color: #FFD700;
+}
+
+#heart{
+    color: var(--pink);
+}
+
+#xmark{
+    color: var(--white);
+    margin-left: 100px;
+}
+/*==== END: TITLE ====*/
+
+/*==== START: TRAILER + IMGS ====*/
+.visuals{
+    display: flex;
+    margin: 10px 0px 10px;
+    gap: 10px;
+}
+
+.visuals video{
+    flex: 1;
+}
+
+.visuals img{
+    flex: 1;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+/**/
+
+/*BOTTOM*/
+.end{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    color: var(--white);
+    background: linear-gradient(to top left, #6A0DAD, #FF5436);
+}
+
+.btn:hover{
+    background: transparent;
+    border: 1rem solid transparent; /*since we set border color transparent, it will show our gradient beneth*/
+    border-width: 0.2rem;
+    background: 
+        linear-gradient(#0E0C1D, #0E0C1D) padding-box, /*paddin-box -> color goes to the edge of diff*/
+        linear-gradient(to right top, #FF5436, #6A0DAD) border-box; /*border-box -> gradient will go to the edge of the border*/
+}
+
+.end ul{
+    display: flex;
+    align-items: space-evenly;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.end img{
+    width: 26px;
+}
+
+.end i{
+    width: 26px;
+}
+
+.end .xbox{
+    color: green;
+}
+
+
+/*==== FOOTER ====*/
+.footer {
+    grid-area: footer;
+    background-color: var(--blue);
+    padding: 30px;
+    color: #cccccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/*==== START: LOGO ====*/
+.footer-logo {
+    flex-grow: 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+/*==== END: LOGO ====*/
+
+
+/*==== START: ABOUT & CONTACT ====*/
+.footer .contact, .footer .about {
+    flex: 2;
+}
+
+.footer-links{
+    display: flex;
+}
+
+.contact{
+    flex: 1;
+}
+
+.about{
+    flex: 1;
+}
+/*==== END: ABOUT & CONTACT ====*/
+
+
+/*==== START: NEWSLETTER & PAY METHODS ====*/
+/*container for both*/
+.news-pay-container{
+    flex: 1;
+    align-items: flex-start;
+}
+
+/*container*/
+.newsletter-container{
+    width: max-content;
+    display: flex;
+    padding: 8px;
+    border: 1rem solid transparent; /*since we set border color transparent, it will show our gradient beneth*/
+    border-radius: 100px;
+    background: 
+        linear-gradient(#0E0C1D,#0E0C1D) padding-box, /*paddin-box -> color goes to the edge of diff*/
+        linear-gradient(to right top, #FF5436, #6A0DAD) border-box; /*border-box -> gradient will go to the edge of the border*/
+    border-width: 0.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--dark-blue);
+}
+
+.newsletter-container form{
+    position: relative;
+    width: 100%;
+}
+
+/*input-box*/
+.newsletter-container input{
+    height: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark-blue);
+    border: none;
+    padding: 0;
+    color: var(--white);
+    font-family: "body";
+    font-size: 1rem;
+}
+
+/*submit-btn*/
+.newsletter-btn{
+    min-width: 30px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    color: var(--white);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+
+/*container*/
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/*imgs*/
+.payment-methods img {
+    width: 30px;
+    height: auto;
+    background-color: white;
+    object-fit: contain;
+}
+
+/*==== START: MOBILE VERSION ====*/
+@media only screen and (max-width: 430px){
+    /*==== START: TOP NAV ====*/
+    .nav{
+        height: 60px;
+        border-end-end-radius: 50px; /*bottom left corner of nav*/
+        border-end-start-radius: 50px; /*bottom right corner of nav*/
+    }
+
+    .nav ul{
+        margin-top: 10px;
+    }
+
+    .nav li{
+        font-size: 26px;
+    }
+
+    .nav .logo, .profile-box{
+        display: none;
+    }
+
+    .nav .menu{
+        margin: 0px 30px 0px;
+        display: flex;
+        font-size: 30px;
+        color: var(--white);
+    }
+    /*==== END: TOP NAV ====*/
+
+    /*==== START: BOTTOM NAV ====*/
+    .mobile {
+        width: 100%; /* Using full width */
+        height: 60px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center; /* Centering icons vertically */
+        justify-content: center; /* Centering the list horizontally */
+        border-start-start-radius: 50px; /* Top left corner of nav */
+        border-start-end-radius: 50px; /* Top right corner of nav */
+        color: var(--white); /* Icon color */
+        background-color: var(--blue); /* Nav container color */
+        z-index: 1;
+    }
+    
+    .mobile-list {
+        display: flex;
+        list-style: none; /* Removing bullet points */
+        width: 100%; /* Ensuring the list takes up full width */
+        justify-content: space-around; /* Distribute icons with equal space around */
+        padding: 0;
+        margin: 0;
+    }
+    
+    .mobile i {
+        font-size: 30px; /* Size of icons */
+    }
+    
+    /*==== END: BOTTOM NAV ====*/
+
+    .sidebar{
+        display: none; /*removing sidebar*/
+    }
+
+
+    /*==== START: MAIN ====*/
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .product{
+        padding-top: 100px;
+    }
+    .product img{
+        width: auto;
+        height: 300px;
+    }
+
+    .info-container{
+        padding: 20px 0px 50px;
+    }
+
+    .images{
+        display: none;
+    }
+    /*==== END: PRODUCT ====*/
+    
+    /*==== START: TITLE + BODY ====*/
+    /*==== END: MAIN ====*/
+
+
+    /*==== START: FOOTER ====*/
+    .footer{
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .footer-logo{
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 50px; /* Space between the lists */
+    }
+
+    .news-pay-container{
+        display: none; /*removing this to give less information to the user, and for more space*/
+    }
+    /*==== END: FOOTER ====*/
+}
+/*==== END: MOBILE VERSION ====*/

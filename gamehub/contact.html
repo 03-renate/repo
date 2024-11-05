@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title></title> 
+        <!--using viewport to tell how width and content should be displayed inside the device, 
+        content width tells the edge of website to follow edge of device, 
+        initial scale tells to scale the content inside the website so it matches the device-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"> 
+        <link rel = "stylesheet" href = "contact.css">
+        <script src = "https://kit.fontawesome.com/49c1127b94.js" crossorigin = "anonymous"></script>
+        <script type = "text/javascript" src = "nav.js" defer> </script>
+    </head>
+
+    <body>
+        <header>
+            <!--NAV START-->
+            <nav class = "nav">
+                <ul>
+                    <!-- LOGO -->
+                    <li class = "logo">
+                        <a role = "logo" href="index.html" class = "logo-img">
+                            <img src = "imgs/logo.png" alt = "logo">
+                        </a>
+                    </li>
+
+                    <!--MENU-->
+                    <li class = "menu">
+                        <i class="fa-solid fa-bars"></i> 
+                    </li>
+
+                    <!-- SEARCH -->
+                    <li class="search-container">
+                        <form action = "">
+                            <input type = "text" placeholder = "Search...">
+                        </form>
+                        <button class = "search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </li>
+
+                    <!-- NOTIFICATION, HELP & PROFILE -->
+                    <li class="profile-container"> 
+                            <i class="fa-solid fa-bell"></i>
+                            <i class="fa-regular fa-circle-question"></i>
+                            <div class = "profile-box">
+                                <img src = "imgs/profile.png" alt = "profile-pic">
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--MOBILE SIDEBAR START-->
+            <nav id = "mobile" class = "mobile">
+                <ul class = "mobile-list">
+                    <!--HOME-->
+                    <li>
+                        <a href="index.html" class="mobile-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                
+                    <!-- LIVE AUCTION -->
+                    <li>
+                        <a href="auction.html" class="mobile-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+
+                    <!-- CART -->
+                    <li>
+                        <a href="cart.html" class="mobile-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- MOBILE NAV END-->
+        </header>
+            <!--NAV END-->
+
+        <!-- MAIN START -->
+        <main>
+            <!--DESKTOP SIDEBAR START-->
+            <aside id = "sidebar" class = "sidebar">
+                <!--HOME-->
+                <ul class = "sidebar-list">
+                    <li>
+                        <a href="index.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- LIVE AUCTION -->
+                <ul>
+                    <li>
+                        <a href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gavel"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- COMMUNITY/LIVE STREAMING -->
+                <ul>
+                    <li>
+                        <a id = "headset" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-headset"></i> 
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- CART -->
+                <ul>
+                    <li>
+                        <a href="cart.html" class="sidebar-link"> 
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- SETTINGS -->
+                <ul>
+                    <li>
+                        <a id = "settings" href="#" class="sidebar-link"> 
+                            <i class="fa-solid fa-gear"></i>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <!--SIDEBAR END-->
+
+            <!--CONTENT START-->
+            <section class="main">
+                
+                <!--HERO START-->
+                <article class = "hero-container">
+                    <span>
+                        <h1>Contact Us</h1>
+                        <p>We at GameHub are ready to provide the right solution according to your needs</p>
+                    </span>
+                </article>
+                
+                <!--CONTACT INFO START-->
+                <article class="contact-content">
+
+                    <!--INFO START-->
+                    <div class="contact-info">
+                        <span>
+                            <h2>GET IN TOUCH</h2>
+                            <p>We would love to hear from you! Whether you have a question,</p> 
+                            <p>need support, or just want to share feedback,</p>
+                            <p>our team is here and ready to help.</p>
+                        </span>
+                        
+                        <div class="item-list">
+                            <!--FIRST ITEM-->
+                            <div class="info-item">
+                                <span><i class="fa-solid fa-location-dot"></i></span>
+                                <div>
+                                    <h3>HEAD OFFICE</h3>
+                                    <p>Mollerparken 4, 0459 Oslo, Norway</p>
+                                </div>
+                            </div>
+
+                            <!--SECOND ITEM-->
+                            <div class="info-item">
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                                <div>
+                                    <h3>E-MAIL US</h3>
+                                    <p>example@gamehub.com</p>
+                                </div>
+                            </div>
+
+                            <!--THIRD ITEM-->
+                            <div class="info-item">
+                                <span><i class="fa-solid fa-phone"></i></span>
+                                <div>
+                                    <h3>CALL US</h3>
+                                    <p>(+47) 380 00 000</p>
+                                    <p>Open from 08:00 - 15:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <hr> <!--creating a line between third item and social media content-->
+
+                        <!--SOCIAL MEDIA-->
+                        <div class="social-media">
+                            <p>FOLLOW OUR SOCIAL MEDIA</p>
+                            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                    </div>
+                    <!--INFO END-->
+                    
+                    <!--SUBMIT-FORM START-->
+                    <div class = "contact-container">
+                        <span class = "contact-title"> <h3>message us</h3> </span>
+                        <form class="contact-form" action="#" method="post">
+                            <input type="text" placeholder="Username" required>
+                            <input type="text" placeholder="Phone" required>
+                            <input type="email" placeholder="E-Mail" required>
+                            <textarea class = "message-box" placeholder="Message" required></textarea>
+                            <button type="submit">SUBMIT</button>
+                        </form>
+                    </div>
+                    <!--SUBMIT-FORM END-->
+                </article>
+                <!--CONTACT INFO END-->
+            
+
+                <!--MAP START-->
+                <article class="map">
+                    <img src = "imgs/map.png" width="100%" height="250" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </article>
+                <!--MAP END-->
+
+            </section>
+            <!--CONTENT END-->
+
+        </main>
+        <!--MAIN END-->
+
+        <!-- FOOTER START -->
+        <footer class="footer">
+
+            <!-- Logo and About Section -->
+            <section class="footer-logo">
+                <a href = "index.html">
+                    <img src="imgs/logo.png" alt="GameHub Logo">
+                </a>
+                <p>© 2015 Gamehub, Inc. All Rights Reserved</p>
+            </section>
+
+            <section class="footer-links">
+                <!-- About Section -->
+                <article class="footer-section about">
+                    <a href = "about.html"> About Us</a>
+                    <p>Privacy & Policy</p>
+                    <p>Terms of Use</p>
+                </article>
+
+                <!-- Contact Section -->
+                <article class="footer-section contact">
+                    <a href = "contact.html"> Contact Us </a>
+                    <p><span> <i class="fa-solid fa-location-dot"></i> </span>Møllerparken 4, 0459 Oslo, Norway</p>
+                    <p><span><i class="fa-solid fa-envelope"></i> </span>example@student.noroff.no</p>
+                </article>
+            </section>
+            
+
+            <!-- Newsletter Section -->
+            <section class = "news-pay-container">
+                <span> <h5>Newsletter SignUp</h5> </span>
+                <div class="newsletter-container">
+                    <form action = "">
+                        <input type="text" placeholder = "E-mail...">
+                    </form>
+                    <button class = "newsletter-btn"> <i class="fa-regular fa-paper-plane"></i> </button>
+                </div>
+                
+                <div class="payment-methods">
+                    <img src="imgs/visa.png" alt="Visa">
+                    <img src="imgs/mastercard.png" alt="Mastercard">
+                    <img src="imgs/paypal.png" alt="PayPal">
+                    <img src="imgs/a-pay.png" alt="Apple Pay">
+                    <img src="imgs/g-pay.png" alt="Google Pay">
+                    <img src="imgs/vipps.png" alt="Vipps">
+                </div>
+            </section>
+
+        </footer>
+        <!--FOOTER END-->
+    </body>
+</html>
